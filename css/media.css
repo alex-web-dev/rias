@@ -311,6 +311,10 @@
     border-color: var(--color-black);
   }
 
+  .header--index:not(.header--fixed) .header__menu .menu__link:hover {
+    color: var(--color-black);
+  }
+
   .header--index:not(.header--fixed) .header__menu .menu__open .menu__lines,
   .header--index:not(.header--fixed) .header__menu .menu__open .menu__lines:before,
   .header--index:not(.header--fixed) .header__menu .menu__open .menu__lines:after {
