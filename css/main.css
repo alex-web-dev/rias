@@ -98,6 +98,7 @@ button {
 }
 
 .title1,
+.title1 h1,
 .title2 {
   line-height: 1.3;
   font-weight: 300;
@@ -105,16 +106,19 @@ button {
 }
 
 .title1--white,
+.title1--white h1,
 .title2--white {
   color: #fff;
 }
 
 .title1--lh-120,
+.title1--lh-120 h1,
 .title2--lh-120 {
   line-height: 1.2;
 }
 
-.title1 {
+.title1,
+.title1 h1 {
   font-size: 32px;
 }
 
