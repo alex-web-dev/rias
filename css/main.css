@@ -138,6 +138,16 @@ button {
   font-size: 26px;
 }
 
+.title1 b,
+.title2 b,
+.title1 h1 b,
+.title2 h2 b,
+.title1 h1 b,
+.title2 h2 b {
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
 .text {
   font-size: 15px;
   line-height: 1.2;
