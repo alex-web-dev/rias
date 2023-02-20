@@ -89,11 +89,6 @@ button {
   transition: border 0.3s;
 }
 
-.input::-webkit-inner-spin-button,
-.input::-webkit-outer-spin-button {
-  appearance: none;
-}
-
 .input[type=number] {
   appearance: textfield;
 }
