@@ -86,7 +86,8 @@
 
 @media (max-width: 1140px) {
   .title1,
-  .title1 h1 {
+  .title1 h1,
+  .title1 h2 {
     font-size: 30px;
   }
 
@@ -129,7 +130,8 @@
   }
 
   .title1,
-  .title1 h1 {
+  .title1 h1,
+  .title1 h2 {
     font-size: 28px;
   }
 
@@ -432,7 +434,8 @@
   }
 
   .title1,
-  .title1 h1 {
+  .title1 h1,
+  .title1 h2 {
     font-size: 22px;
     font-weight: 400;
   }
@@ -629,7 +632,8 @@
 
 @media (max-width: 480px) {
   .title1,
-  .title1 h1 {
+  .title1 h1,
+  .title1 h2 {
     font-size: 18px;
   }
 
