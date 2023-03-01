@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="img/favicon.png">
-	<title>РИАС | Контакты</title>
+	<title>РИАС | Заявка на расчет проекта</title>
 	<link href="css/overlayscrollbars.min.css" rel="stylesheet">
 	<link href="css/normalize.css?v=5" rel="stylesheet">
 	<link href="css/fonts.css?v=5" rel="stylesheet">
@@ -106,56 +106,10 @@
 	</header>
 
 	<main class="main">
-		<div class="contacts">
+		<section class="app">
 			<div class="container container--xl">
-				<div class="contacts__content">
-					<div class="breadcrumbs contacts__breadcrumbs">
-						<div class="breadcrumbs__list">
-							<div class="breadcrumbs__item">
-								<span class="breadcrumbs__current">Контакты</span>
-							</div>
-						</div>
-					</div>
-					<div class="contacts__main">
-						<div class="contacts__item">
-							<p class="contacts__item-text">111123, г. Москва, ш. Энтузиастов 56, стр. 32 этаж 2, офис 255</p>
-						</div>
-						<div class="contacts__item">
-							<a class="contacts__item-text" href="tel:+74951477878">+7 (495) 147-78-78</a>
-						</div>
-						<div class="contacts__item ">
-							<a class="contacts__item-text" href="mailto:info@riastech.ru">info@riastech.ru</a>
-						</div>
-						<div class="contacts__item">
-							<p class="contacts__item-text">ООО "РИАС"</p>
-						</div>
-						<div class="contacts__item">
-							<p class="contacts__item-text">ИНН: 7728303934</p>
-						</div>
-						<div class="contacts__item">
-							<div class="contacts__item-img">
-								<img src="img/contacts-img.svg" alt="">
-							</div>
-						</div>
-						<div class="contacts__item">
-							<p class="contacts__item-text">КПП: 772001001</p>
-						</div>
-						<div class="contacts__item">
-							<p class="contacts__item-text">ОГРН: 1037728051008</p>
-						</div>
-					</div>
-					<div class="contacts__map">
-						<iframe
-							src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad925cae335e97d055abc6fc86103920423ef139f8c92ccc1ed112b7f5f8e437c&amp;source=constructor"></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<section class="callback">
-			<div class="container container--xl">
-				<div class="callback__content">
-					<div class="callback__main">
+				<div class="app__content">
+					<div class="app__main">
 						<div class="breadcrumbs">
 							<div class="breadcrumbs__list">
 								<div class="breadcrumbs__item">
@@ -163,13 +117,41 @@
 								</div>
 							</div>
 						</div>
-						<div class="callback__info">
-							<div class="title1 callback__title">
-								<h2>Нужна помощь с подбором? Оформите заявку</h2>
-							</div>
-							<button class="btn btn--black callback__btn">Оформить заявку на расчет проекта</button>
+						<div class="title1 app__title">
+							<h1>Скачайте и заполните нужный вам опросный лист, чтобы помочь нам <b>подобрать оборудование</b> для
+								вашего производства</h1>
+						</div>
+						<div class="app__links">
+							<a class="app__link" href="#">Для заказа газоанализатора</a>
+							<a class="app__link" href="#">Для заказа системы жидкостного анализа</a>
+							<a class="app__link" href="#">Для заказа системы газового анализа</a>
 						</div>
 					</div>
+
+					<form class="app-form app__form" autocomplete="off" method="POST">
+						<div class="breadcrumbs app-form__breadcrumbs">
+							<div class="breadcrumbs__list">
+								<div class="breadcrumbs__item">
+									<span class="breadcrumbs__current">Форма отправки</span>
+								</div>
+							</div>
+						</div>
+						<div class="app-form__body">
+							<div class="app-form__main">
+								<p class="text app-form__text">После заполнения опросного листа, вам необходимо загрузить его и
+									отправить нам</p>
+								<label class="file-field app-form__field">
+									<input type="file" class="file-field__input js-file-input" data-file-output="app-file">
+									<span class="file-field__name js-file-value" data-file-output="app-file">Выберите файл</span>
+									<span class="btn btn--black-white file-field__label">Выбрать</span>
+								</label>
+							</div>
+							<img class="app-form__img" src="img/arrows.svg" alt="">
+						</div>
+						<div class="app-form__footer">
+							<button class="btn app-form__submit">Отправить заявку</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</section>
