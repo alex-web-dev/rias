@@ -445,6 +445,10 @@ button {
   align-items: center;
 }
 
+.logo__img {
+  object-fit: contain;
+}
+
 .logo__text {
   font-size: 20px;
   font-weight: 700;
