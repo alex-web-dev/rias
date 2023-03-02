@@ -1019,7 +1019,7 @@
   }
 
   .product-card__img {
-    padding-top: 0;
+    padding: 0 15px;
     width: 142px;
     min-height: 142px;
     flex: 0 0 auto;
@@ -1029,6 +1029,9 @@
   .product-card__img img {
     position: static;
     transform: translate(0, 0);
+    padding: 10px 0;
+    max-width: 100%;
+    max-height: 140px
   }
 
   .product-card__name {
