@@ -962,6 +962,11 @@ button {
   background: #fff;
 }
 
+.webp .banner--white,
+.no-webp .banner--white {
+  background: #fff;
+}
+
 .banner--white .banner__title {
   max-width: 704px;
   color: var(--color-black);
