@@ -1029,6 +1029,10 @@ button {
   border-right: none;
 }
 
+.partners__item-img {
+  object-fit: contain;
+}
+
 .services {
   padding: 16px 0 125px;
   background-color: #000;
