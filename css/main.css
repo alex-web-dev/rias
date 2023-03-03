@@ -851,16 +851,17 @@ button {
   margin-top: -120px;
   padding-top: 120px;
   padding-bottom: 60px;
-  background-position-y: 26%;
   min-height: max(900px, 100vh);
 }
 
 .webp .banner {
   background: url(../img/banner.webp) top/cover no-repeat;
+  background-position-y: 26%;
 }
 
 .no-webp .banner {
   background: url(../img/banner.jpg) top/cover no-repeat;
+  background-position-y: 26%;
 }
 
 .banner__content {

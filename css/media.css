@@ -904,6 +904,10 @@
     margin-top: -155px;
     padding-top: 155px;
     padding-bottom: 32px;
+  }
+
+  .webp .banner,
+  .no-webp .banner {
     background-position-x: 52%;
   }
 
