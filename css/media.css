@@ -7,6 +7,14 @@
     padding-right: 0;
   }
 
+  .webp .banner {
+    background-position-y: 48%;
+  }
+  
+  .no-webp .banner {
+    background-position-y: 48%;
+  }
+
   .directs__info {
     padding: 0 16px;
   }
