@@ -990,7 +990,6 @@ button {
   margin-top: -120px;
   padding-top: 120px;
   padding-bottom: 60px;
-  background: url(../img/banner.jpg) center/cover no-repeat;
   background-position-y: 44%;
   min-height: max(900px, 100vh);
 }
