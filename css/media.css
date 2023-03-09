@@ -1915,6 +1915,11 @@
     padding: 16px;
   }
 
+  .product__big-slide img {
+    max-height: calc(182px - 32px);
+    object-fit: contain;
+  }
+
   .product__big-slide--video {
     padding: 0;
   }
