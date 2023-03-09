@@ -143,6 +143,136 @@ $numInputs.forEach($input => {
   });
 });
 
+/* Product */
+const $products = document.querySelectorAll('.product');
+$products.forEach($product => {
+  const $navSlider = $product.querySelector('.product__nav-slider');
+  const $bigSlider = $product.querySelector('.product__big-slider')
+  const navSlider = new Swiper($navSlider, {
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    breakpoints: {
+      768: {
+        direction: 'vertical',
+      }
+    }
+  });
+
+  const bigSlider = new Swiper($bigSlider, {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    thumbs: {
+      swiper: navSlider,
+    },
+    navigation: {
+      prevEl: '.product__slider-prev',
+      nextEl: '.product__slider-next',
+      clickable: true,
+    },
+  });
+
+  window.addEventListener('resize', () => {
+    if ((window.innerWidth >= 768 && navSlider.params.direction !== 'vertical') ||
+      (window.innerWidth < 768 && navSlider.params.direction !== 'horizontal')) {
+      navSlider.update();
+    }
+  });
+
+  /* Video */
+  bigSlider.on('slideChange', () => {
+    const $activeIframe = $product.querySelector('.product__big-slide--video iframe');
+    if ($activeIframe) {
+      stopYTVideo($activeIframe, 'hide')
+      return;
+    }
+
+    const $activeSlide = bigSlider.el.querySelectorAll('.swiper-slide')[bigSlider.activeIndex];
+    if (!$activeSlide.classList.contains('product__big-slide--video')) {
+      return;
+    }
+
+    const $video = $activeSlide.querySelector('.product__big-slide-video');
+    const url = $video.dataset.src;
+    if (!url) {
+      return;
+    }
+
+    const $iframe = createYTFrame(url);
+    $video.append($iframe);
+    $video.addEventListener('click', () => toggleYTVideo($iframe));
+  });
+});
+
+/* Tabs */
+const $tabsLists = document.querySelectorAll('.tabs');
+$tabsLists.forEach($tabs => {
+  const $btns = $tabs.querySelectorAll('.tabs__btn');
+  $btns.forEach(($btn, index) => {
+    $btn.addEventListener('click', () => {
+      const $oldActiveBtn = $tabs.querySelector('.tabs__btn--active');
+      const $oldActiveTab = $tabs.querySelector('.tabs__item--active');
+      const $newActiveBtn = $tabs.querySelectorAll('.tabs__btn')[index];
+      const $newActiveTab = $tabs.querySelectorAll('.tabs__item')[index];
+
+      $oldActiveTab.classList.remove('tabs__item--active');
+      $oldActiveBtn.classList.remove('tabs__btn--active');
+
+      $newActiveBtn.classList.add('tabs__btn--active');
+      $newActiveTab.classList.add('tabs__item--active');
+    });
+  });
+});
+
+/* Smooth scroll */
+const $anchors = document.querySelectorAll('a[href*="#"]');
+$anchors.forEach($anchor => {
+  $anchor.addEventListener('click', e => {
+    const id = $anchor.getAttribute('href');
+    const headerHeight = document.querySelector('.header').offsetHeight;
+
+    if (id[0] === '#') {
+      e.preventDefault();
+    }
+
+    if (id === '#') {
+      return;
+    }
+
+    const $elem = document.querySelector(id);
+    if ($elem) {
+      const additionOffset = -2;
+      const offsetTop = $elem.getBoundingClientRect().top - headerHeight - additionOffset;
+      window.scrollBy({ top: (offsetTop), left: 0, behavior: 'smooth' });
+    }
+  });
+});
+
+
+function createYTFrame(url) {
+  const $iframe = document.createElement('iframe');
+  $iframe.dataset.play = '1';
+  $iframe.setAttribute('src', `${url}?autoplay=1&enablejsapi=1&rel=0`);
+  $iframe.setAttribute('autoplay', '');
+  $iframe.setAttribute('frameborder', '0');
+  $iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+  $iframe.setAttribute('allowfullscreen', '');
+
+  return $iframe;
+}
+
+function stopYTVideo($iframe) {
+  $iframe.dataset.play = '0';
+  const iframeWindow = $iframe.contentWindow;
+  iframeWindow.postMessage(`{"event": "command", "func": "pauseVideo", "args": ""}`, '*');
+}
+
+function toggleYTVideo($iframe) {
+  const iframeWindow = $iframe.contentWindow;
+  const toggle = $iframe.dataset.play == '1' ? 'pauseVideo' : 'playVideo';
+  iframeWindow.postMessage(`{"event": "command", "func": "${toggle}", "args": ""}`, '*');
+  $iframe.dataset.play = $iframe.dataset.play === '1' ? '0' : '1';
+}
+
 function setInputFilter(textbox, inputFilter) {
   ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout"].forEach(function (event) {
     textbox.addEventListener(event, function () {
