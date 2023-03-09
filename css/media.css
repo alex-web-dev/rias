@@ -1759,6 +1759,11 @@
     border-bottom: none;
   }
 
+  .product__slider-next,
+  .product__slider-prev {
+    display: flex;
+  }
+
   .product__excerpt {
     padding: 24px 8px 0;
   }
