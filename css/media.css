@@ -1702,7 +1702,7 @@
 
   .product-models__img {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-left: 0;
     grid-column: 2/3;
     grid-row: 2/3;
