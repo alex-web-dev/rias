@@ -10,7 +10,7 @@
   .webp .banner {
     background-position-y: 48%;
   }
-  
+
   .no-webp .banner {
     background-position-y: 48%;
   }
@@ -182,22 +182,6 @@
     padding-bottom: 105px;
   }
 
-  .product-models:before {
-    grid-column: 1/3;
-  }
-
-  .product-models__main {
-    grid-column: 3/9;
-  }
-
-  .product-models__more {
-    grid-column: 3/9;
-  }
-
-  .product-models__items {
-    grid-column: 9/13;
-  }
-
   .product__main {
     margin-bottom: 105px;
   }
@@ -276,6 +260,22 @@
 
   .product-card__info {
     padding: 18px 22px 18px 20px;
+  }
+  
+  .product-models__main {
+    grid-column: 2/7;
+  }
+
+  .product-models__more {
+    grid-column: 2/7;
+  }
+
+  .product-models__img {
+    grid-column: 7/10;
+  }
+
+  .product-models__img img {
+    max-height: 160px;
   }
 
   .team__img {
@@ -927,14 +927,36 @@
 
   .product-models {
     padding: 32px 16px 30px;
+    grid-template-columns: 100px 1fr 1fr;
   }
 
   .product-models:before {
     font-size: 15px;
+    grid-column: 1/2;
+  }
+
+  .product-models__main {
+    padding-right: 0;
+    grid-row: 1/2;
+    grid-column: 2/3;
   }
 
   .product-models__more {
+    margin-top: 24px;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .product-models__img {
+    grid-column: 3/4;
+    padding-right: 0;
+    padding-left: 20px;
+  }
+
+  .product-models__items {
     margin-top: 12px;
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
 
   .product-models__item:not(:first-child) {
@@ -1667,34 +1689,34 @@
 
   .product-models {
     padding: 16px 8px 14px;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 80px 1fr;
   }
 
   .product-models:before {
-    grid-column: 1/2;
     font-size: 14px;
   }
 
-  .product-models__main {
-    padding-right: 0;
-    grid-row: 1/2;
-    grid-column: 2/3;
+  .product-models__more {
+    grid-row: 4/5;
   }
 
-  .product-models__more {
-    margin-top: 24px;
-    grid-row: 3/4;
+  .product-models__img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 0;
     grid-column: 2/3;
+    grid-row: 2/3;
+    max-width: 200px;
+    max-height: 160px;
+    text-align: left;
+  }
+
+  .product-models__img img {
+    object-position: left;
   }
 
   .product-models__items {
-    margin-top: 12px;
-    grid-row: 2/3;
-    grid-column: 2/3;
-  }
-
-  .product-models__item:not(:first-child) {
-    margin-top: 12px;
+    grid-row: 3/4;
   }
 
   .model__main {

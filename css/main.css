@@ -1449,13 +1449,13 @@ button {
 
 .product-models:before {
   display: block;
-  grid-column: 1/4;
+  grid-column: 1/2;
 }
 
 .product-models__main {
   max-width: 615px;
   padding-right: 15px;
-  grid-column: 4/10;
+  grid-column: 2/6;
 }
 
 .product-models__title {
@@ -1470,7 +1470,20 @@ button {
 .product-models__more {
   margin-top: 16px;
   display: inline-flex;
-  grid-column: 4/10;
+  grid-column: 2/6;
+}
+
+.product-models__img {
+  padding-right: 25px;
+  grid-column: 6/10;
+  grid-row: 1/5;
+  text-align: center;
+}
+
+.product-models__img img {
+  object-fit: contain;
+  height: auto;
+  max-height: 100%;
 }
 
 .product-models__items {
