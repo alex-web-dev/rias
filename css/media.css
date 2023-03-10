@@ -81,6 +81,10 @@
     padding: 16px 34px;
   }
 
+  .main__title {
+    margin-bottom: 70px;
+  }
+
   .banner {
     min-height: max(700px, 100vh);
   }
@@ -256,6 +260,10 @@
 
   .breadcrumbs {
     padding-bottom: 54px;
+  }
+
+  .main__title {
+    margin-bottom: 54px;
   }
 
   .banner__feature {
@@ -575,6 +583,10 @@
 
   .main {
     padding-top: 170px;
+  }
+
+  .main__title {
+    margin-bottom: 40px;
   }
 
   .main__directs {
@@ -1126,6 +1138,11 @@
 
   .main {
     padding-top: 155px;
+  }
+
+  .main__title {
+    margin-bottom: 32px;
+    padding: 0 8px;
   }
 
   .main__directs {

@@ -981,6 +981,16 @@ button {
   overflow: hidden;
 }
 
+.main__title {
+  margin-bottom: 80px;
+  padding: 0 16px;
+}
+
+.main__title h1,
+.main__title h2 {
+  text-transform: none;
+}
+
 .main__directs {
   margin-top: 125px;
 }
