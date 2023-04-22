@@ -2531,7 +2531,7 @@ button {
 .popup__content {
   position: relative;
   max-width: calc(100vw - 50px);
-  max-height: calc(100vh - 50px);
+  max-height: calc(100vh - 80px);
   border-radius: 6px;
   transition: transform .4s;
   transform: translateY(20px);
@@ -2541,7 +2541,7 @@ button {
   position: relative;
   width: 800px;
   max-width: 100%;
-  padding-top: min(56.25%, calc(100vh - 50px));
+  padding-top: min(56.25%, calc(100vh - 80px));
 }
 
 .popup__video iframe {
